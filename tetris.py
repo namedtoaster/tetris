@@ -348,10 +348,10 @@ for y in range(0, len(intro_squares)):
 
 # Set all values in the board array to zero (signifying empty tile)
 
-board = range(0, B_WIDTH)
+board = list(range(0, B_WIDTH))
 
 for x in range(0, B_WIDTH):
-    board[x] = range(0, B_HEIGHT)
+    board[x] = list(range(0, B_HEIGHT))
     for y in range(0, B_HEIGHT):
         board[x][y] = 0
 
@@ -370,11 +370,11 @@ def print_board():
     for y in range(0, B_HEIGHT):
         for x in range(0, B_WIDTH):
             if x != B_WIDTH - 1:
-                print board[x][y],
+                print(board[x][y], end=' ')
             else:
-                print board[x][y]
-    print ' '
-    print ' '
+                print(board[x][y])
+    print(' ')
+    print(' ')
 
     
 
@@ -404,10 +404,10 @@ def reset_board():
 # Define the 4x4 piece array which will fill appropriately according to
 # which piece is being played
 
-piece = range(0, 4)
+piece = list(range(0, 4))
 
 for x in range(0, 4):
-    piece[x] = range(0, 4)
+    piece[x] = list(range(0, 4))
     for y in range(0, 4):
         piece[x][y] = 0
 
@@ -776,10 +776,10 @@ def compare_w_board(selection):
 
     select_piece(selection)
 
-    test_board = range(0, B_WIDTH)
+    test_board = list(range(0, B_WIDTH))
 
     for x in range(0, B_WIDTH):
-        test_board[x] = range(0, B_HEIGHT)
+        test_board[x] = list(range(0, B_HEIGHT))
         for y in range(0, B_HEIGHT):
             test_board[x][y] = 0
 
@@ -2268,10 +2268,10 @@ def select_piece(selection):
 
 # Occupy appropriate spots in the next pieces
 
-next_piece_help = range(0, 4)
+next_piece_help = list(range(0, 4))
 
 for x in range(0, 4):
-    next_piece_help[x] = range(0, 4)
+    next_piece_help[x] = list(range(0, 4))
     for y in range(0, 4):
         next_piece_help[x][y] = 0
 
@@ -2336,10 +2336,10 @@ def select_next_piece(selection):
     
     if selection == 28: next_piece_help[1][0] = 2; next_piece_help[0][1] = 2; next_piece_help[1][1] = 2; next_piece_help[0][2] = 2
 
-second_piece_help = range(0, 4)
+second_piece_help = list(range(0, 4))
 
 for x in range(0, 4):
-    second_piece_help[x] = range(0, 4)
+    second_piece_help[x] = list(range(0, 4))
     for y in range(0, 4):
         second_piece_help[x][y] = 0
 
@@ -2404,10 +2404,10 @@ def select_second_piece(selection):
     
     if selection == 28: second_piece_help[1][0] = 2; second_piece_help[0][1] = 2; second_piece_help[1][1] = 2; second_piece_help[0][2] = 2
 
-third_piece_help = range(0, 4)
+third_piece_help = list(range(0, 4))
 
 for x in range(0, 4):
-    third_piece_help[x] = range(0, 4)
+    third_piece_help[x] = list(range(0, 4))
     for y in range(0, 4):
         third_piece_help[x][y] = 0
 
@@ -2472,10 +2472,10 @@ def select_third_piece(selection):
     
     if selection == 28: third_piece_help[1][0] = 2; third_piece_help[0][1] = 2; third_piece_help[1][1] = 2; third_piece_help[0][2] = 2
 
-hold_piece_help = range(0, 4)
+hold_piece_help = list(range(0, 4))
 
 for x in range(0, 4):
-    hold_piece_help[x] = range(0, 4)
+    hold_piece_help[x] = list(range(0, 4))
     for y in range(0, 4):
         hold_piece_help[x][y] = 0
 
@@ -2543,16 +2543,16 @@ def select_hold_piece(selection):
 
 def print_hold():
 
-    print ' '
+    print(' ')
     
     for y in range(0, 4):
         for x in range(0, 4):
             if x != 3:
-                print hold_piece_help[x][y],
+                print(hold_piece_help[x][y], end=' ')
             else:
-                print hold_piece_help[x][y]
+                print(hold_piece_help[x][y])
 
-    print ' '
+    print(' ')
 
 
 
